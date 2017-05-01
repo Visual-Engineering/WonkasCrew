@@ -1,0 +1,71 @@
+PODS:
+  - Alamofire (4.3.0)
+  - BNRDeferred (3.0.0)
+  - BSWFoundation (1.0.1):
+    - Alamofire (~> 4.3.0)
+    - BNRDeferred (= 3.0.0)
+    - Decodable (~> 0.5)
+    - KeychainAccess (~> 3.0.1)
+  - BSWInterfaceKit (0.3.0):
+    - BSWFoundation (~> 1.0.1)
+    - PINRemoteImage
+  - Decodable (0.5)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - FLAnimatedImage (1.0.12)
+  - JWTDecode (2.0.0)
+  - KeychainAccess (3.0.1)
+  - PINCache (2.3)
+  - PINRemoteImage (2.1.4):
+    - PINRemoteImage/FLAnimatedImage (= 2.1.4)
+  - PINRemoteImage/Core (2.1.4):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (2.1.4):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - WonkaKit (0.0.1):
+    - BSWFoundation
+    - JWTDecode
+    - KeychainAccess
+
+DEPENDENCIES:
+  - BSWInterfaceKit (from `https://github.com/BlurredSoftware/BSWInterfaceKit.git`)
+  - FBSnapshotTestCase
+  - SDWebImage
+  - WonkaKit (from `WonkaKit`)
+
+EXTERNAL SOURCES:
+  BSWInterfaceKit:
+    :git: https://github.com/BlurredSoftware/BSWInterfaceKit.git
+  WonkaKit:
+    :path: WonkaKit
+
+CHECKOUT OPTIONS:
+  BSWInterfaceKit:
+    :commit: 8cec4d774846f88d934310177adbbf4081657717
+    :git: https://github.com/BlurredSoftware/BSWInterfaceKit.git
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  BNRDeferred: 0757b256613622d3f3db21bd126ba63031ca3deb
+  BSWFoundation: b6633919abf3549e3d43bb04e3263a0139621c9b
+  BSWInterfaceKit: 038dc78d4b3bb362c752a489e9d64721e4aed9fb
+  Decodable: 7c90acc68d357b71d0d6efc120faf9c53c644b7e
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  JWTDecode: 178e47e5d28d3abcff778bacced8342858cd6cb5
+  KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  WonkaKit: 227efc6c46a56ad1ee873c4f85ae5f24ee266f98
+
+PODFILE CHECKSUM: 65390aef0cde8fff32cc51dcb904b2fc022a474f
+
+COCOAPODS: 1.2.0

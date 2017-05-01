@@ -13,7 +13,7 @@ import BSWFoundation
 @testable import WonkasCrew
 
 private class InteractorFake: CrewInteractorType {
-    public func retrieveCrew() -> Task<CrewViewModel> {
+    public func retrieveCrew(maxNumber: Int) -> Task<CrewViewModel> {
         return Task(success: CrewViewModel.fake)
     }
 }
@@ -38,10 +38,10 @@ class WonkasCrewTests: SnapshotTestCase {
     
     
     func testSnapshotOompaLoompaCell() {
-        let cell = OompaLoompaCell(frame: .zero)
+        let cell = OompaLoompaCell(frame: CGRect(origin: .zero, size: CGSize(width: currentWindow.bounds.width, height: 50)))
         cell.configureFor(viewModel: OompaLoompa.fake)
-        cell.frame = CGRect(origin: .zero, size: CGSize(width: currentWindow.bounds.width, height: 50))
         
-        debugView(cell)
+        recordMode = true
+        verifyView(cell)
     }
 }

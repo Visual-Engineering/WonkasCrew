@@ -25,7 +25,12 @@ private class APIClientSpy: APIClientType {
     func retrieveCrew(maxNumber: Int) -> Task<CrewListResponse> {
         isCalled = true
         
-        let result: TaskResult<CrewListResponse> = JSONParser.parseData(Data(fromJSONFileNamed: "crew"))
+        let data = Data(
+            contentsOfJSONFile: "crew",
+            bundle: Bundle(for: type(of: self))
+        )
+        
+        let result: TaskResult<CrewListResponse> = JSONParser.parseData(data)
         guard let value = result.value else { fatalError() }
         return Task(success: value)
     }
@@ -36,7 +41,10 @@ class WonkasCrewTests: SnapshotTestCase {
     private let ANY_NUMBER: Int = 0
     
     func testJSONParsing() {
-        let data = Data(fromJSONFileNamed: "crew")
+        let data = Data(
+            contentsOfJSONFile: "crew",
+            bundle: Bundle(for: type(of: self))
+        )
         
         let result: TaskResult<CrewListResponse> = JSONParser.parseData(data)
         switch result {

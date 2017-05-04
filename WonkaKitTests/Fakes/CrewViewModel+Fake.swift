@@ -7,6 +7,7 @@
 //
 
 import BSWFoundation
+@testable import WonkasCrew
 
 extension CrewViewModel {
     public static var fake: CrewViewModel {

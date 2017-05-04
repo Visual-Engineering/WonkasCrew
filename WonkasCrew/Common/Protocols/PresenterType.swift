@@ -9,13 +9,13 @@
 import Foundation
 import Deferred
 
-protocol PresenterType {
+protocol Presentable {
     associatedtype Response
     static func viewModelTask(fromResponse response: Response) -> Task<Self>
     init(fromResponse response: Response)
 }
 
-extension PresenterType {
+extension Presentable {
     static func viewModelTask(fromResponse response: Response) -> Task<Self> {
         let deferred = Deferred<TaskResult<Self>>()
         deferred.fill(with: .success(Self(fromResponse: response)))

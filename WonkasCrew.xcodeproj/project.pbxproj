@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		391E28F8C8F60455020657E8 /* Pods_WonkasCrewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849849BFC3C8F5155DC926F4 /* Pods_WonkasCrewTests.framework */; };
+		67756D721EBBD026004CB432 /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67756D711EBBD026004CB432 /* Data+JSONFile.swift */; };
 		677A89011EB5D16200702D2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677A89001EB5D16200702D2E /* AppDelegate.swift */; };
 		677A89031EB5D16200702D2E /* CrewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677A89021EB5D16200702D2E /* CrewListViewController.swift */; };
 		677A89061EB5D16200702D2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677A89041EB5D16200702D2E /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		1AC002F317F1BA510EDF68EF /* Pods-WonkasCrew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonkasCrew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WonkasCrew/Pods-WonkasCrew.debug.xcconfig"; sourceTree = "<group>"; };
 		400A6814DDF6C8F8DD64FC22 /* Pods-WonkasCrewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonkasCrewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonkasCrewTests/Pods-WonkasCrewTests.release.xcconfig"; sourceTree = "<group>"; };
 		6587C53D72DAA0C2A41A3301 /* Pods-WonkasCrew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WonkasCrew.release.xcconfig"; path = "Pods/Target Support Files/Pods-WonkasCrew/Pods-WonkasCrew.release.xcconfig"; sourceTree = "<group>"; };
+		67756D711EBBD026004CB432 /* Data+JSONFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+JSONFile.swift"; path = "Common/Categories/Data+JSONFile.swift"; sourceTree = "<group>"; };
 		677A88FD1EB5D16200702D2E /* WonkasCrew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonkasCrew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		677A89001EB5D16200702D2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		677A89021EB5D16200702D2E /* CrewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewListViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				677A89841EB65E1B00702D2E /* UIView+FitSize.swift */,
+				67756D711EBBD026004CB432 /* Data+JSONFile.swift */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				677A89721EB6000100702D2E /* CrewInteractor.swift in Sources */,
 				677A89851EB65E1B00702D2E /* UIView+FitSize.swift in Sources */,
 				677A89011EB5D16200702D2E /* AppDelegate.swift in Sources */,
+				67756D721EBBD026004CB432 /* Data+JSONFile.swift in Sources */,
 				677A897F1EB64F7100702D2E /* CrewViewModel+Fake.swift in Sources */,
 				677A89241EB5D51200702D2E /* CrewViewModel.swift in Sources */,
 			);

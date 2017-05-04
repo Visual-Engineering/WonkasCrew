@@ -18,14 +18,25 @@ private class InteractorFake: CrewInteractorType {
     }
 }
 
+private class APIClientSpy: APIClientType {
+    
+    var isCalled: Bool = false
+    
+    func retrieveCrew(maxNumber: Int) -> Task<CrewListResponse> {
+        isCalled = true
+        
+        let result: TaskResult<CrewListResponse> = JSONParser.parseData(Data(fromJSONFileNamed: "crew"))
+        guard let value = result.value else { fatalError() }
+        return Task(success: value)
+    }
+}
+
 class WonkasCrewTests: SnapshotTestCase {
     
+    private let ANY_NUMBER: Int = 0
+    
     func testJSONParsing() {
-        guard let path = Bundle.main.path(forResource: "crew", ofType: "json"),
-            let jsonStr = try? String(contentsOfFile: path),
-            let data = jsonStr.data(using: .utf8, allowLossyConversion: false) else {
-                fatalError()
-        }
+        let data = Data(fromJSONFileNamed: "crew")
         
         let result: TaskResult<CrewListResponse> = JSONParser.parseData(data)
         switch result {
@@ -36,12 +47,43 @@ class WonkasCrewTests: SnapshotTestCase {
         }
     }
     
+    func testCrewInteractor() {
+        //Given
+        let apiSpy = APIClientSpy()
+        let interactor = CrewInteractor(apiClient: apiSpy)
+        
+        //When
+        let crewTask = interactor.retrieveCrew(maxNumber: ANY_NUMBER)
+        
+        //Then
+        XCTAssert(apiSpy.isCalled)
+        
+        let exp = expectation(description: "crew is received correctly")
+        crewTask.upon(.main) { (result) in
+            switch result {
+            case .success:
+                XCTAssert(true)
+            case .failure:
+                XCTAssert(false)
+            }
+            exp.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10, handler: nil)
+    }
+    
     
     func testSnapshotOompaLoompaCell() {
         let cell = OompaLoompaCell(frame: CGRect(origin: .zero, size: CGSize(width: currentWindow.bounds.width, height: 50)))
         cell.configureFor(viewModel: OompaLoompa.fake)
         
-        recordMode = true
         verifyView(cell)
+    }
+    
+    func testSnapshotCrewViewController() {
+        let vc = CrewListViewController()
+        vc.interactor = InteractorFake()
+
+        verifyViewController(vc)
     }
 }

@@ -26,7 +26,7 @@ struct OompaLoompa {
     let role: String
 }
 
-extension CrewViewModel: PresenterType {
+extension CrewViewModel: Presentable {
     
     init(fromResponse response: CrewListResponse) {
         self.crew = response.crew.map({ oompa -> OompaLoompa in

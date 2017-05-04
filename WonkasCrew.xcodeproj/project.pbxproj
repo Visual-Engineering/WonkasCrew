@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		391E28F8C8F60455020657E8 /* Pods_WonkasCrewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849849BFC3C8F5155DC926F4 /* Pods_WonkasCrewTests.framework */; };
 		67756D721EBBD026004CB432 /* Data+JSONFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67756D711EBBD026004CB432 /* Data+JSONFile.swift */; };
-		67756D751EBBD58C004CB432 /* WonkasCrewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677A89151EB5D16300702D2E /* WonkasCrewTests.swift */; };
 		67756D771EBBD5B7004CB432 /* crew.json in Resources */ = {isa = PBXBuildFile; fileRef = 677A897C1EB648E400702D2E /* crew.json */; };
 		67756D791EBBDACD004CB432 /* XCTestCase+JSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67756D781EBBDACD004CB432 /* XCTestCase+JSONData.swift */; };
 		67756D7A1EBBDE1B004CB432 /* CrewViewModel+Fake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677A897E1EB64F7100702D2E /* CrewViewModel+Fake.swift */; };
@@ -64,7 +63,6 @@
 		677A890A1EB5D16200702D2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		677A890C1EB5D16200702D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		677A89111EB5D16300702D2E /* WonkasCrewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WonkasCrewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		677A89151EB5D16300702D2E /* WonkasCrewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonkasCrewTests.swift; sourceTree = "<group>"; };
 		677A89171EB5D16300702D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		677A89231EB5D51200702D2E /* CrewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrewViewModel.swift; path = Scenes/CrewList/CrewViewModel.swift; sourceTree = "<group>"; };
 		677A89261EB5D77A00702D2E /* OompaLoompaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OompaLoompaCell.swift; path = Scenes/CrewList/Cells/OompaLoompaCell.swift; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				677A897A1EB648AB00702D2E /* Fakes */,
-				677A89151EB5D16300702D2E /* WonkasCrewTests.swift */,
 				677A89171EB5D16300702D2E /* Info.plist */,
 				677A89801EB6591D00702D2E /* SnapshotTestCase.swift */,
 				67756D781EBBDACD004CB432 /* XCTestCase+JSONData.swift */,
@@ -492,7 +489,6 @@
 				677A89811EB6591D00702D2E /* SnapshotTestCase.swift in Sources */,
 				67756D791EBBDACD004CB432 /* XCTestCase+JSONData.swift in Sources */,
 				67756D7A1EBBDE1B004CB432 /* CrewViewModel+Fake.swift in Sources */,
-				67756D751EBBD58C004CB432 /* WonkasCrewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
